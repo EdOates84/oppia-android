@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package model;
+
+option java_package = "org.oppia.app.model";
+option java_multiple_files = true;
+
+message UserAppHistory {
+  bool already_opened_app = 1;
+}
+
+message TestMessage {
+  int32 version = 1;
+}
+
+message TestModel {
+  oneof model_type {
+    string str_value = 1;
+    int32 int_value = 2;
+  }
+}
